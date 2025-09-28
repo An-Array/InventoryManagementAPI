@@ -6,6 +6,12 @@ class ProductBase(BaseModel):
   stock_quantity: int
   low_stock_threshold: int
 
+class ProductUpdate(BaseModel):
+  name: str | None = None
+  description: str | None = None
+  stock_quantity: int | None = None
+  low_stock_threshold: int | None = None
+
 class StockChange(BaseModel):
   change: int
 

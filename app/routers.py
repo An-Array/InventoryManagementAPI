@@ -50,7 +50,7 @@ def delete_product(id: int, db:Session = Depends(get_db)):
 
 # Update a Product (replace fields)
 @router.patch("/{id}", response_model=schemas.ResponseBase)
-def update_product(id: int, product: schemas.ProductBase, db:Session = Depends(get_db)):
+def update_product(id: int, product: schemas.ProductUpdate, db:Session = Depends(get_db)):
   pd_q = db.get(models.Product, id)
   if not pd_q:
     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Product ID Doesn't Exist!")
