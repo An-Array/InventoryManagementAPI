@@ -31,15 +31,14 @@
 - ORM: SQLAlchemy
 - Database: PostgreSQL
 - Data Validation: Pydantic
-- Testing: pytest
 
 ## Setup Instructions
 
 1. Clone the Repo
 
     ```bash
-    git clone https://github.com/An-Array/
-    cd 
+    git clone https://github.com/An-Array/InventoryManagementAPI
+    cd InventoryManagementAPI 
     ```
 
 2. Create Virtual Environment
@@ -58,12 +57,12 @@
 4. Configure Environment Variables
 
     - Create a .env file in the Project root
-
+    - Also create a database named ```inventory_db``` in pgAdmin
     ```.env
     database_hostname=localhost
     database_port=5432
     database_username=postgres
-    database_password=postgres
+    database_password=<Your_DB_Password>
     database_name=inventory_db
     ```
 
